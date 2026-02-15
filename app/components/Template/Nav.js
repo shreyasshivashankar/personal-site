@@ -10,7 +10,7 @@ const Nav = () => (
   <section id="sidebar">
     <section id="intro">
       <Link to="/" className="logo">
-        <img src="https://i.imgur.com/jzvz61u.jpg" alt="" />
+        <img src="/images/profile.png" alt="Shreyas Shivashankar" />
       </Link>
       <header>
         <h2>Shreyas Shivashankar</h2>
@@ -25,7 +25,7 @@ const Nav = () => (
       </p>
       <ul className="actions">
         <li>
-          {window.location.pathname !== `/resume` ? <Link to="/resume" className="button">Learn More</Link> : <Link to="/about" className="button">About Me</Link>}
+          {window.location.pathname !== `/resume` ? <Link to="/resume" className="button">Learn More</Link> : <Link to="/" className="button">About Me</Link>}
         </li>
       </ul>
     </section>
