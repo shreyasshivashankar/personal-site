@@ -8,9 +8,18 @@ const Job = ({ data }) => (
       <p className="daterange"> {data.daterange}</p>
     </header>
     <ul className="points">
-      {data.points.map((point) => (
-        <li key={point}>{point}</li>
-      ))}
+      {data.points.map((point) => {
+        const colonIndex = point.indexOf(':');
+        if (colonIndex > 0 && colonIndex < 60) {
+          return (
+            <li key={point}>
+              <strong>{point.substring(0, colonIndex)}</strong>
+              {point.substring(colonIndex)}
+            </li>
+          );
+        }
+        return <li key={point}>{point}</li>;
+      })}
     </ul>
   </article>
 );
