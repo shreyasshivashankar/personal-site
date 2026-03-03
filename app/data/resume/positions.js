@@ -6,10 +6,11 @@ const positions = [
     link: 'https://aws.amazon.com/ecr/',
     daterange: 'February 2025 - Present',
     points: [
-      'Architected and built a unified ECR async execution platform by integrating new AWS services and internal tooling to support image signing, replication, and scanning workflows, reducing new feature onboarding time by 75% while sustaining 1M+ TPS throughput.',
-      'Designed and onboarded fairness-aware scheduling and adaptive retry mechanisms to handle burst traffic and evolving workload patterns under high concurrency.',
-      'Implemented identity-based credential delegation using Forward Access Sessions and envelope encryption, enforcing least-privilege authorization for ECR Async actions by validating caller permissions before execution, preventing unauthorized operations while maintaining full auditability.',
-      'Designed and implemented a deduplication and idempotency control mechanism for event-driven workflows, preventing redundant jobs triggered by overlapping image events, ensuring only a single execution per logical operation and reducing unnecessary compute and processing overhead.',
+      'Migrated disparate microservices for image replication, scanning, and lifecycle policies into a single event-driven asynchronous platform, reducing the time required to integrate new async features and workflows by 80%.',
+      'Engineered a horizontally scaling job scheduler using SQS queues and Fargate worker threads. Implemented partition ownership via the DynamoDB Lock Client to dynamically scale throughput via shard counts. Tuned concurrency and backpressure mechanisms to maintain flat end-to-end job lifecycle times, successfully load-testing the architecture to absorb bursty traffic spikes of 1M+ TPS without latency degradation.',
+      'Replaced legacy, permissive Service Linked Roles with a custom token-based authorization mechanism to prevent organizational policy bypasses. Designed the system to generate and persist Forward Access Session tokens in DynamoDB during core image actions, deliberately trading a 10% latency increase for a significantly hardened, strictly validated security posture.',
+      'Built an Investigation Agent using the Strands SDK and Large Language Models to automate root-cause analysis for Severity Incident Management (SIM) tickets. Integrated a vector database to query CloudWatch logs, source code, and runbooks, cutting ticket resolution time by 80%.',
+      'Mentored junior engineers on deploying MCP (Model Context Protocol) servers for context-aware debugging, accelerating onboarding and operational troubleshooting.',
     ],
   },
   {
@@ -18,8 +19,8 @@ const positions = [
     link: 'https://aws.amazon.com/s3/',
     daterange: 'July 2021 - February 2025',
     points: [
-      'Designed and implemented control-plane recovery workflows to detect degraded quorums and automatically trigger host replacement using lightweight deep health checks optimized for S3 request-path latency, eliminating 100% of manual operational effort and reducing incident detection time from hours to under 3 minutes.',
-      'Automated deployment workload assignment and region build pipelines, saving 5+ engineering hours per deployment cycle and enabling continuous 24-hour patching cadence.',
+      'Redesigned host replacement workflows for an S3 metadata caching layer (managing 9-host quorums across 3 AZs) by replacing simplistic reachability pings with asynchronous "deep health checks."',
+      'Prevented degraded hosts from blackholing traffic by prioritizing strict quorum correctness. This drove a 0.093% increase in overall system availability, effectively trading a 5-8% increase in heap usage and a ~3ms latency overhead for deterministic reliability.',
     ],
   },
   {
@@ -28,7 +29,8 @@ const positions = [
     link: 'https://aws.amazon.com/',
     daterange: 'June 2020 - September 2020',
     points: [
-      'Built real-time network monitoring dashboard for AWS data centers backed by an event-driven aggregation pipeline using DynamoDB Streams and Lambda, improving data retrieval performance by 60%, enabling visualization across 256k+ devices, and reducing operational debugging time by 30%.',
+      'Built a custom D3.js dashboard for the network engineering team to visualize data center connectivity. Engineered the backend to aggregate state across 256+ network devices via concurrent API calls, achieving full data center load times of under one second.',
+      'Eliminated time-series navigation latency by implementing background pre-fetching and caching from the landing page.',
     ],
   },
 ];

@@ -1,16 +1,16 @@
 export const categories = [
   {
-    name: 'Languages',
+    name: 'Languages & Runtime',
     color: '#6968b3',
   }, {
-    name: 'Distributed Systems',
+    name: 'AI & Agentic Systems',
+    color: '#e47272',
+  }, {
+    name: 'Data & Systems Design',
     color: '#515dd4',
   }, {
-    name: 'Cloud & DevOps',
+    name: 'Infrastructure & Storage',
     color: '#3896e2',
-  }, {
-    name: 'Data & Security',
-    color: '#64cb7b',
   },
 ];
 
@@ -18,126 +18,121 @@ export const skills = [
   {
     title: 'Java',
     compentency: 5,
-    category: ['Languages'],
+    category: ['Languages & Runtime'],
+  },
+  {
+    title: 'JavaScript',
+    compentency: 5,
+    category: ['Languages & Runtime'],
   },
   {
     title: 'Python',
     compentency: 5,
-    category: ['Languages'],
+    category: ['Languages & Runtime'],
   },
   {
     title: 'Go',
     compentency: 4,
-    category: ['Languages'],
+    category: ['Languages & Runtime'],
   },
   {
     title: 'Rust',
     compentency: 3,
-    category: ['Languages'],
-  },
-  {
-    title: 'C++',
-    compentency: 3,
-    category: ['Languages'],
-  },
-  {
-    title: 'TypeScript',
-    compentency: 4,
-    category: ['Languages'],
+    category: ['Languages & Runtime'],
   },
   {
     title: 'SQL',
     compentency: 4,
-    category: ['Languages', 'Data & Security'],
+    category: ['Languages & Runtime'],
   },
   {
-    title: 'Event-Driven Architecture',
+    title: 'Agentic Workflows',
     compentency: 5,
-    category: ['Distributed Systems'],
+    category: ['AI & Agentic Systems'],
   },
   {
-    title: 'Async Workflows',
+    title: 'Strands SDK',
     compentency: 5,
-    category: ['Distributed Systems'],
+    category: ['AI & Agentic Systems'],
   },
   {
-    title: 'Microservices',
+    title: 'Vector Databases',
     compentency: 5,
-    category: ['Distributed Systems'],
+    category: ['AI & Agentic Systems'],
   },
   {
-    title: 'Replication & Quorum Systems',
+    title: 'MCP Servers',
     compentency: 5,
-    category: ['Distributed Systems'],
+    category: ['AI & Agentic Systems'],
   },
   {
-    title: 'Fault Tolerance & Retries',
+    title: 'Data Modeling',
     compentency: 5,
-    category: ['Distributed Systems'],
+    category: ['Data & Systems Design'],
+  },
+  {
+    title: 'Schema Evolution',
+    compentency: 5,
+    category: ['Data & Systems Design'],
   },
   {
     title: 'Idempotency',
     compentency: 5,
-    category: ['Distributed Systems'],
+    category: ['Data & Systems Design'],
   },
   {
-    title: 'REST / gRPC API Design',
+    title: 'Consistency Guarantees',
     compentency: 5,
-    category: ['Distributed Systems'],
+    category: ['Data & Systems Design'],
+  },
+  {
+    title: 'Event-Driven Systems',
+    compentency: 5,
+    category: ['Data & Systems Design'],
+  },
+  {
+    title: 'Async Workflows',
+    compentency: 5,
+    category: ['Data & Systems Design'],
+  },
+  {
+    title: 'Retries & Backpressure',
+    compentency: 5,
+    category: ['Data & Systems Design'],
+  },
+  {
+    title: 'PostgreSQL',
+    compentency: 5,
+    category: ['Infrastructure & Storage'],
+  },
+  {
+    title: 'DynamoDB',
+    compentency: 5,
+    category: ['Infrastructure & Storage'],
   },
   {
     title: 'AWS',
     compentency: 5,
-    category: ['Cloud & DevOps'],
-  },
-  {
-    title: 'CI/CD',
-    compentency: 5,
-    category: ['Cloud & DevOps'],
-  },
-  {
-    title: 'CloudFormation / CDK',
-    compentency: 5,
-    category: ['Cloud & DevOps'],
-  },
-  {
-    title: 'Terraform',
-    compentency: 5,
-    category: ['Cloud & DevOps'],
+    category: ['Infrastructure & Storage'],
   },
   {
     title: 'Docker',
     compentency: 5,
-    category: ['Cloud & DevOps'],
+    category: ['Infrastructure & Storage'],
   },
   {
     title: 'Kubernetes',
     compentency: 5,
-    category: ['Cloud & DevOps'],
+    category: ['Infrastructure & Storage'],
   },
   {
-    title: 'Envelope Encryption',
+    title: 'CDK / CloudFormation',
     compentency: 5,
-    category: ['Data & Security'],
+    category: ['Infrastructure & Storage'],
   },
   {
-    title: 'Credential Management',
+    title: 'Terraform',
     compentency: 5,
-    category: ['Data & Security'],
-  },
-  {
-    title: 'Audit Logging',
-    compentency: 5,
-    category: ['Data & Security'],
-  },
-  {
-    title: 'Monitoring & Observability',
-    compentency: 5,
-    category: ['Data & Security', 'Cloud & DevOps'],
-  },
-  {
-    title: 'Structured Logging',
-    compentency: 5,
-    category: ['Data & Security'],
+    category: ['Infrastructure & Storage'],
   },
 ];
